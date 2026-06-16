@@ -11,7 +11,7 @@ else:
     client = genai.Client(api_key=api_key)
     response = client.models.generate_content(
         model="gemini-2.5-flash",
-        contents="Scold ALi Bazai for arguing unnecessarily on everything and don't follow western culture blindly. specially drake. in roman urdu in 1 sentence."
+        contents="Say Greetigns in roman urdu in 1 sentence."
     )
     print("Gemini works:", response.text)
     print("\nEnvironment fully ready. Let's build")
