@@ -31,12 +31,18 @@ def get_quiz_agent(subject, language):
         role=f"{subject} Quiz Master",
         goal=f"""Generate exactly the requested number of quiz questions 
         from {subject} FBISE 10th grade past papers and syllabus.
-        Always respond in {language}.""",
+        Always respond in {language}.
+        When writing formulas use clear text notation:
+        - Powers: use ^ symbol (e.g. mc^2, x^2)
+        - Fractions: use / symbol (e.g. v/t, m/v)  
+        - Greek letters: spell out (e.g. delta, theta, pi)
+        This ensures formulas display correctly in the chat interface.""",
         backstory=f"""You are a senior FBISE examiner with deep knowledge of 
         10th grade {subject} past papers and examination patterns. You create 
         fair, syllabus-aligned questions that test real understanding.
         You always format questions clearly and numbered.
-        You respond in {language} only.""",
+        You respond in {language} only.
+        """, 
         llm=llm,
         verbose=False
     )
